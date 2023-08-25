@@ -988,10 +988,10 @@
             </objects>
             <point key="canvasLocation" x="-1.4492753623188408" y="77.678571428571431"/>
         </scene>
-        <!--Past Paper View Controller-->
+        <!--Past Paper Collection View Controller-->
         <scene sceneID="b3s-8w-hGE">
             <objects>
-                <viewController storyboardIdentifier="pastPapersVC" id="NBf-LU-AW4" customClass="PastPaperViewController" customModule="Finance_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="pastPapersVC" id="NBf-LU-AW4" customClass="PastPaperCollectionViewController" customModule="Finance_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zh7-0A-VEa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1155,10 +1155,10 @@
             </objects>
             <point key="canvasLocation" x="800" y="1503"/>
         </scene>
-        <!--School Paper View Controller-->
+        <!--School Paper Collection View Controller-->
         <scene sceneID="del-pf-w6N">
             <objects>
-                <viewController storyboardIdentifier="schoolPapersVC" id="1x3-Vl-LeD" customClass="SchoolPaperViewController" customModule="Finance_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="schoolPapersVC" id="1x3-Vl-LeD" customClass="SchoolPaperCollectionViewController" customModule="Finance_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i5D-4x-XYc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1276,10 +1276,10 @@
             </objects>
             <point key="canvasLocation" x="1651" y="78"/>
         </scene>
-        <!--Tutorial View Controller-->
+        <!--Tutorial Collection View Controller-->
         <scene sceneID="7c4-M2-NHH">
             <objects>
-                <viewController storyboardIdentifier="tutorialsVC" id="gnO-Vv-eVf" customClass="TutorialViewController" customModule="Finance_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tutorialsVC" id="gnO-Vv-eVf" customClass="TutorialCollectionViewController" customModule="Finance_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ThW-n4-TrJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
