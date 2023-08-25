@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PastPaperViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class PastPaperCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     let dataSource: [PastPaper] = [
         PastPaper(year: "2021", marks: "78%", date: "2023-08-03", duration: "2 Hrs", url: "https://www.google.com"),

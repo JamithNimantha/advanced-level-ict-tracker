@@ -1,5 +1,5 @@
 //
-//  SchoolPaperViewController.swift
+//  TutorialViewController.swift
 //  Finance Calculator
 //
 //  Created by Kirishikesan on 2023-08-23.
@@ -7,14 +7,15 @@
 
 import UIKit
 
-class SchoolPaperViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-
-    let dataSource: [SchoolPaper] = [
-        SchoolPaper(year: "2021", marks: "78%", date: "2023-08-03", duration: "2 Hrs", url: "https://www.google.com"),
-        SchoolPaper(year: "2021", marks: "78%", date: "2023-08-03", duration: "2 Hrs", url: "https://www.google.com"),
-        SchoolPaper(year: "2021", marks: "78%", date: "2023-08-03", duration: "2 Hrs", url: "https://www.google.com"),
-        SchoolPaper(year: "2021", marks: "78%", date: "2023-08-03", duration: "2 Hrs", url: "https://www.google.com")
+class TutorialCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    let dataSource: [Tutorial] = [
+        Tutorial(year: "2021", marks: "78%", date: "2023-08-03", duration: "2 Hrs", url: "https://www.google.com"),
+        Tutorial(year: "2021", marks: "78%", date: "2023-08-03", duration: "2 Hrs", url: "https://www.google.com"),
+        Tutorial(year: "2021", marks: "78%", date: "2023-08-03", duration: "2 Hrs", url: "https://www.google.com"),
+        Tutorial(year: "2021", marks: "78%", date: "2023-08-03", duration: "2 Hrs", url: "https://www.google.com")
     ]
+    
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -26,7 +27,7 @@ class SchoolPaperViewController: UIViewController, UICollectionViewDelegate, UIC
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         var cell = UICollectionViewCell()
-        if let learningMaterialCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell2", for: indexPath) as? CollectionViewCell {
+        if let learningMaterialCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell3", for: indexPath) as? CollectionViewCell {
             learningMaterialCell.configure(with: dataSource[indexPath.row])
             cell = learningMaterialCell
         }
