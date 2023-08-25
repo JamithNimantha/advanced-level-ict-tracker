@@ -13,6 +13,14 @@
 		00EBEE342A93DA9300617F8F /* PastPapersHelpViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EBEE332A93DA9300617F8F /* PastPapersHelpViewContoller.swift */; };
 		00EBEE392A93F46200617F8F /* PastPapersData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EBEE382A93F46200617F8F /* PastPapersData+CoreDataClass.swift */; };
 		00EBEE3B2A93F4CD00617F8F /* PastPapersData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EBEE3A2A93F4CD00617F8F /* PastPapersData+CoreDataProperties.swift */; };
+		61114B0B2A97CC6100089933 /* SchoolPaperCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61114B0A2A97CC6100089933 /* SchoolPaperCollectionViewController.swift */; };
+		61114B0D2A97CC7300089933 /* TutorialCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61114B0C2A97CC7300089933 /* TutorialCollectionViewController.swift */; };
+		61171E792A98EB14004CE6BD /* LearningMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61171E782A98EB14004CE6BD /* LearningMaterial.swift */; };
+		61171E7B2A98EBEC004CE6BD /* PastPaper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61171E7A2A98EBEC004CE6BD /* PastPaper.swift */; };
+		61171E7D2A98EC57004CE6BD /* Tutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61171E7C2A98EC57004CE6BD /* Tutorial.swift */; };
+		61171E7F2A98EC7A004CE6BD /* SchoolPaper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61171E7E2A98EC7A004CE6BD /* SchoolPaper.swift */; };
+		61171E812A98ED5A004CE6BD /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61171E802A98ED5A004CE6BD /* CollectionViewCell.swift */; };
+		61C3D59B2A94F240003B7AA5 /* PastPaperCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C3D59A2A94F240003B7AA5 /* PastPaperCollectionViewController.swift */; };
 		B940A81F257DA543004736AB /* AmortizedDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B940A81E257DA543004736AB /* AmortizedDataController.swift */; };
 		B940A821257DA786004736AB /* AmortizedDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B940A820257DA786004736AB /* AmortizedDataView.swift */; };
 		B940A823257DB1CC004736AB /* AmortizedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B940A822257DB1CC004736AB /* AmortizedData.swift */; };
@@ -64,10 +72,21 @@
 /* Begin PBXFileReference section */
 		001CF82C2A76740700BE969F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		001CF82E2A76E30900BE969F /* ProfileHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHelpViewController.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		00EBEE312A93DA4800617F8F /* PastPapersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastPapersViewController.swift; sourceTree = "<group>"; };
 		00EBEE332A93DA9300617F8F /* PastPapersHelpViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastPapersHelpViewContoller.swift; sourceTree = "<group>"; };
 		00EBEE382A93F46200617F8F /* PastPapersData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PastPapersData+CoreDataClass.swift"; sourceTree = "<group>"; };
 		00EBEE3A2A93F4CD00617F8F /* PastPapersData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PastPapersData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+=======
+		61114B0A2A97CC6100089933 /* SchoolPaperCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolPaperCollectionViewController.swift; sourceTree = "<group>"; };
+		61114B0C2A97CC7300089933 /* TutorialCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialCollectionViewController.swift; sourceTree = "<group>"; };
+		61171E782A98EB14004CE6BD /* LearningMaterial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningMaterial.swift; sourceTree = "<group>"; };
+		61171E7A2A98EBEC004CE6BD /* PastPaper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastPaper.swift; sourceTree = "<group>"; };
+		61171E7C2A98EC57004CE6BD /* Tutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutorial.swift; sourceTree = "<group>"; };
+		61171E7E2A98EC7A004CE6BD /* SchoolPaper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolPaper.swift; sourceTree = "<group>"; };
+		61171E802A98ED5A004CE6BD /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		61C3D59A2A94F240003B7AA5 /* PastPaperCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastPaperCollectionViewController.swift; sourceTree = "<group>"; };
+>>>>>>> master
 		B940A81E257DA543004736AB /* AmortizedDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmortizedDataController.swift; sourceTree = "<group>"; };
 		B940A820257DA786004736AB /* AmortizedDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmortizedDataView.swift; sourceTree = "<group>"; };
 		B940A822257DB1CC004736AB /* AmortizedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmortizedData.swift; sourceTree = "<group>"; };
@@ -154,6 +173,10 @@
 			children = (
 				B9EAD2B9257B173B005B00FC /* HomeButton.swift */,
 				B940A822257DB1CC004736AB /* AmortizedData.swift */,
+				61171E782A98EB14004CE6BD /* LearningMaterial.swift */,
+				61171E7A2A98EBEC004CE6BD /* PastPaper.swift */,
+				61171E7C2A98EC57004CE6BD /* Tutorial.swift */,
+				61171E7E2A98EC7A004CE6BD /* SchoolPaper.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -183,8 +206,15 @@
 				B940A81E257DA543004736AB /* AmortizedDataController.swift */,
 				001CF82C2A76740700BE969F /* ProfileViewController.swift */,
 				001CF82E2A76E30900BE969F /* ProfileHelpViewController.swift */,
+<<<<<<< HEAD
 				00EBEE312A93DA4800617F8F /* PastPapersViewController.swift */,
 				00EBEE332A93DA9300617F8F /* PastPapersHelpViewContoller.swift */,
+=======
+				61C3D59A2A94F240003B7AA5 /* PastPaperCollectionViewController.swift */,
+				61114B0A2A97CC6100089933 /* SchoolPaperCollectionViewController.swift */,
+				61114B0C2A97CC7300089933 /* TutorialCollectionViewController.swift */,
+				61171E802A98ED5A004CE6BD /* CollectionViewCell.swift */,
+>>>>>>> master
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -390,8 +420,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9EAD2E1257D98DF005B00FC /* SavingsData+CoreDataClass.swift in Sources */,
+				61171E792A98EB14004CE6BD /* LearningMaterial.swift in Sources */,
 				B9EAD2A7257AA6E7005B00FC /* MortgageViewController.swift in Sources */,
 				B940A823257DB1CC004736AB /* AmortizedData.swift in Sources */,
+				61171E7B2A98EBEC004CE6BD /* PastPaper.swift in Sources */,
+				61114B0B2A97CC6100089933 /* SchoolPaperCollectionViewController.swift in Sources */,
 				B940A821257DA786004736AB /* AmortizedDataView.swift in Sources */,
 				B9EAD2B6257AD7B4005B00FC /* Colors.swift in Sources */,
 				B9EAD2D6257D526D005B00FC /* MortgageHelpViewController.swift in Sources */,
@@ -399,6 +432,7 @@
 				B9FFF57D2579A9F70036AC75 /* Finance_Calculator.xcdatamodeld in Sources */,
 				00EBEE3B2A93F4CD00617F8F /* PastPapersData+CoreDataProperties.swift in Sources */,
 				001CF82F2A76E30900BE969F /* ProfileHelpViewController.swift in Sources */,
+				61171E7F2A98EC7A004CE6BD /* SchoolPaper.swift in Sources */,
 				B9FFF5772579A9F70036AC75 /* MainViewController.swift in Sources */,
 				00EBEE392A93F46200617F8F /* PastPapersData+CoreDataClass.swift in Sources */,
 				B9EAD2D0257D4CC6005B00FC /* HelpViewController.swift in Sources */,
@@ -406,18 +440,27 @@
 				B9EAD2D4257D5259005B00FC /* LoanHelpViewController.swift in Sources */,
 				B9EAD2BA257B173B005B00FC /* HomeButton.swift in Sources */,
 				B9EAD2A9257AAADE005B00FC /* TabBarController.swift in Sources */,
+				61C3D59B2A94F240003B7AA5 /* PastPaperCollectionViewController.swift in Sources */,
 				B9EAD2C3257BBEB0005B00FC /* ScrollViewController.swift in Sources */,
 				B9EAD2D2257D5248005B00FC /* SavingHelpViewController.swift in Sources */,
 				B9EAD2AB257AAB64005B00FC /* SavingsViewController.swift in Sources */,
 				B9EAD2CB257CF15E005B00FC /* UITextFields.swift in Sources */,
 				B9EAD2AD257AAB73005B00FC /* LoanViewController.swift in Sources */,
+				61114B0D2A97CC7300089933 /* TutorialCollectionViewController.swift in Sources */,
 				B940A81F257DA543004736AB /* AmortizedDataController.swift in Sources */,
 				B9EAD2C9257CE3BC005B00FC /* CommonFunctions.swift in Sources */,
 				B9FFF5732579A9F70036AC75 /* AppDelegate.swift in Sources */,
+<<<<<<< HEAD
 				00EBEE322A93DA4800617F8F /* PastPapersViewController.swift in Sources */,
 				B9FFF5752579A9F70036AC75 /* SceneDelegate.swift in Sources */,
 				B9EAD2E2257D98DF005B00FC /* SavingsData+CoreDataProperties.swift in Sources */,
 				00EBEE342A93DA9300617F8F /* PastPapersHelpViewContoller.swift in Sources */,
+=======
+				61171E7D2A98EC57004CE6BD /* Tutorial.swift in Sources */,
+				B9FFF5752579A9F70036AC75 /* SceneDelegate.swift in Sources */,
+				B9EAD2E2257D98DF005B00FC /* SavingsData+CoreDataProperties.swift in Sources */,
+				61171E812A98ED5A004CE6BD /* CollectionViewCell.swift in Sources */,
+>>>>>>> master
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
