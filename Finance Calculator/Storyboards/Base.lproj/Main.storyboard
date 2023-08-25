@@ -915,76 +915,221 @@
             <objects>
                 <viewController storyboardIdentifier="profileVC" id="uLR-GO-40Y" customClass="ProfileViewController" customModule="Finance_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DrS-ps-It1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile3" translatesAutoresizingMaskIntoConstraints="NO" id="Ioe-0N-37R">
-                                <rect key="frame" x="123" y="88" width="167" height="149"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ysc-Af-UoG">
-                                <rect key="frame" x="113" y="309" width="189" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.9407089959151419" blue="0.69895858926595777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Sachin Mamoru">
-                                        <attributes>
-                                            <color key="NSColor" red="0.5713796713917525" green="0.3497740843205101" blue="0.083705159328146803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" metaFont="system" size="28"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evj-1b-c0x">
-                                <rect key="frame" x="97" y="377" width="221" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Software Engineer">
-                                        <attributes>
-                                            <color key="NSColor" red="0.5713796713917525" green="0.3497740843205101" blue="0.083705159328146803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" metaFont="system" size="28"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ws0-qO-LxX">
-                                <rect key="frame" x="128" y="449" width="157" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="MSc Student">
-                                        <attributes>
-                                            <color key="NSColor" red="0.5713796713917525" green="0.3497740843205101" blue="0.083705159328146803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" metaFont="system" size="28"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="c2B-Uw-QFO">
-                                <rect key="frame" x="92" y="502" width="228" height="88"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </datePicker>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" directionalLockEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="az8-KC-4pW">
+                                <rect key="frame" x="0.0" y="48" width="393" height="1183"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sZo-BV-Ino">
+                                        <rect key="frame" x="-4" y="-17" width="414" height="1037"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile3" translatesAutoresizingMaskIntoConstraints="NO" id="Udf-cU-sIm" userLabel="profilePic">
+                                                <rect key="frame" x="99" y="57" width="222" height="218"/>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6c5-EM-bUB">
+                                                <rect key="frame" x="40" y="331" width="335" height="175"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Past Papers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R04-Ut-jvL">
+                                                        <rect key="frame" x="94" y="8" width="131" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total - " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ze-q4-aQw" userLabel="PPTotal">
+                                                        <rect key="frame" x="121" y="45" width="131" height="22"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AVG Marks - " textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtd-SY-fnn" userLabel="PPAVGMarks">
+                                                        <rect key="frame" x="72" y="75" width="204" height="22"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Max Marks - " textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOT-Yb-po4" userLabel="PPMaxMarks">
+                                                        <rect key="frame" x="73" y="105" width="203" height="22"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Min Marks - " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XgU-q0-OKb" userLabel="PPMinMarks">
+                                                        <rect key="frame" x="75" y="135" width="198" height="22"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="21l-uw-qH8" appends="YES" id="SRS-Qk-HkB"/>
+                                                    <outletCollection property="gestureRecognizers" destination="21l-uw-qH8" appends="YES" id="sTy-dR-5Sl"/>
+                                                </connections>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8A4-qo-7S8" userLabel="School Papers View">
+                                                <rect key="frame" x="40" y="525" width="335" height="175"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="School Papers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZD-KG-zaE">
+                                                        <rect key="frame" x="90" y="8" width="154" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total - " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMf-ie-ehe" userLabel="SPTotal">
+                                                        <rect key="frame" x="112" y="44" width="107" height="22"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AVG Marks - " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddS-Gf-47p" userLabel="SPAVGMarks">
+                                                        <rect key="frame" x="64" y="74" width="230" height="22"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Max Marks - " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpZ-Np-KwX" userLabel="SPMaxMarks">
+                                                        <rect key="frame" x="65" y="104" width="229" height="22"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Min Marks - " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sbc-eV-C4O" userLabel="SPMinMarks">
+                                                        <rect key="frame" x="71" y="134" width="217" height="22"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="21l-uw-qH8" appends="YES" id="j9E-qr-tVm"/>
+                                                </connections>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JE8-YJ-3No" userLabel="Tutorial Papers View">
+                                                <rect key="frame" x="40" y="717" width="335" height="175"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tutorials" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSH-09-1Sg">
+                                                        <rect key="frame" x="92" y="8" width="154" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total - " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtW-9D-nYX" userLabel="TPTotal">
+                                                        <rect key="frame" x="105" y="46" width="175" height="22"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AVG Marks - " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjn-Gb-2aQ" userLabel="TPAVGMarks">
+                                                        <rect key="frame" x="55" y="76" width="225" height="22"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <gestureRecognizers/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="21l-uw-qH8" appends="YES" id="Arq-hJ-WLw"/>
+                                                        </connections>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Max Marks - " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJf-ZA-4W1" userLabel="TPMaxMarks">
+                                                        <rect key="frame" x="56" y="106" width="224" height="22"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Min Marks - " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbv-md-XCy" userLabel="TPMinMarks">
+                                                        <rect key="frame" x="61" y="136" width="185" height="22"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="John Doe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhF-Kw-ucG" userLabel="name">
+                                                <rect key="frame" x="86" y="273" width="243" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="dlt-tL-bOl"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="fhF-Kw-ucG" firstAttribute="leading" secondItem="sZo-BV-Ino" secondAttribute="leading" constant="86" id="04m-mT-fcu"/>
+                                            <constraint firstAttribute="trailing" secondItem="Udf-cU-sIm" secondAttribute="trailing" constant="72" id="Pt9-vS-kzb"/>
+                                            <constraint firstItem="fhF-Kw-ucG" firstAttribute="top" secondItem="sZo-BV-Ino" secondAttribute="top" constant="273" id="Y4U-RR-aT2"/>
+                                            <constraint firstItem="Udf-cU-sIm" firstAttribute="leading" secondItem="sZo-BV-Ino" secondAttribute="leading" constant="99" id="Z5j-cG-J4X"/>
+                                            <constraint firstAttribute="trailing" secondItem="fhF-Kw-ucG" secondAttribute="trailing" constant="85" id="b1u-Hc-WGr"/>
+                                            <constraint firstItem="fhF-Kw-ucG" firstAttribute="top" secondItem="Udf-cU-sIm" secondAttribute="bottom" constant="-2" id="nUB-5o-VCj"/>
+                                            <constraint firstItem="Udf-cU-sIm" firstAttribute="top" secondItem="sZo-BV-Ino" secondAttribute="top" constant="57" id="yeY-zp-t2Z"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="fd3-BL-kLZ" firstAttribute="bottom" secondItem="sZo-BV-Ino" secondAttribute="bottom" constant="42" id="Ku1-l1-1wt"/>
+                                    <constraint firstItem="sZo-BV-Ino" firstAttribute="trailing" secondItem="az8-KC-4pW" secondAttribute="trailingMargin" id="c6c-hq-alA"/>
+                                    <constraint firstItem="fd3-BL-kLZ" firstAttribute="trailing" secondItem="sZo-BV-Ino" secondAttribute="trailing" constant="8" id="fh7-7o-pCN"/>
+                                    <constraint firstItem="sZo-BV-Ino" firstAttribute="top" secondItem="az8-KC-4pW" secondAttribute="top" constant="-42" id="uqd-SC-W77"/>
+                                    <constraint firstItem="sZo-BV-Ino" firstAttribute="leading" secondItem="az8-KC-4pW" secondAttribute="leading" constant="-8" id="whv-si-stJ"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Mp7-YE-EJk"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="fd3-BL-kLZ"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Cm3-zw-nMv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="az8-KC-4pW" firstAttribute="top" secondItem="Cm3-zw-nMv" secondAttribute="top" id="G1m-rn-D2y"/>
+                            <constraint firstItem="az8-KC-4pW" firstAttribute="centerX" secondItem="DrS-ps-It1" secondAttribute="centerX" id="p6R-MF-Dy7"/>
+                            <constraint firstItem="az8-KC-4pW" firstAttribute="leading" secondItem="Cm3-zw-nMv" secondAttribute="leading" id="qkh-0G-Aa3"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="az8-KC-4pW" secondAttribute="bottom" constant="-34" id="raA-gt-k6E"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="dateLbl" destination="c2B-Uw-QFO" id="70S-LP-cqQ"/>
-                        <outlet property="degreeLbl" destination="ws0-qO-LxX" id="cvQ-5n-TWF"/>
-                        <outlet property="nameLbl" destination="Ysc-Af-UoG" id="xSE-Oo-Twt"/>
-                        <outlet property="professionLbl" destination="Evj-1b-c0x" id="QjD-T7-ISc"/>
-                        <outlet property="profileImg" destination="Ioe-0N-37R" id="njT-A3-vQw"/>
+                        <outlet property="PPAVGMarks" destination="xtd-SY-fnn" id="jeM-Xc-fxc"/>
+                        <outlet property="PPMaxMarks" destination="wOT-Yb-po4" id="mhm-A5-oIc"/>
+                        <outlet property="PPMinMarks" destination="XgU-q0-OKb" id="mDr-7e-TIu"/>
+                        <outlet property="SPAVGMarks" destination="ddS-Gf-47p" id="MU7-9f-OOi"/>
+                        <outlet property="SPMaxMarks" destination="wpZ-Np-KwX" id="Jk9-n1-z0N"/>
+                        <outlet property="SPMinMarks" destination="Sbc-eV-C4O" id="DjX-Ie-7uk"/>
+                        <outlet property="SPTotal" destination="oMf-ie-ehe" id="a8n-t9-o9p"/>
+                        <outlet property="TPAVGMarks" destination="zjn-Gb-2aQ" id="zvX-cr-zFQ"/>
+                        <outlet property="TPMaxMarks" destination="kJf-ZA-4W1" id="c0P-MI-80c"/>
+                        <outlet property="TPMinMarks" destination="Cbv-md-XCy" id="2bX-DR-kaz"/>
+                        <outlet property="TPTotal" destination="vtW-9D-nYX" id="9OC-xI-byZ"/>
+                        <outlet property="pastPapersView" destination="6c5-EM-bUB" id="VGW-iS-gsE"/>
+                        <outlet property="ppTotal" destination="4ze-q4-aQw" id="ik2-kz-08R"/>
+                        <outlet property="profileImg" destination="Udf-cU-sIm" id="fMe-T3-0NF"/>
+                        <outlet property="profileName" destination="fhF-Kw-ucG" id="EYm-wF-Ccj"/>
+                        <outlet property="schoolPaperView" destination="8A4-qo-7S8" id="Tli-8A-OgK"/>
+                        <outlet property="tutorialView" destination="JE8-YJ-3No" id="S7q-qT-a9t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uau-pI-dh0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="21l-uw-qH8"/>
             </objects>
             <point key="canvasLocation" x="-1.4492753623188408" y="77.678571428571431"/>
         </scene>
