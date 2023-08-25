@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		001CF82D2A76740700BE969F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001CF82C2A76740700BE969F /* ProfileViewController.swift */; };
 		001CF82F2A76E30900BE969F /* ProfileHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001CF82E2A76E30900BE969F /* ProfileHelpViewController.swift */; };
+		00ADEEB22A99239A000B80CF /* AddPastPaperController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ADEEB12A99239A000B80CF /* AddPastPaperController.swift */; };
+		00ADEEB42A99336E000B80CF /* AddSchoolPaperController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ADEEB32A99336E000B80CF /* AddSchoolPaperController.swift */; };
+		00ADEEB62A9935AE000B80CF /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ADEEB52A9935AE000B80CF /* OverviewViewController.swift */; };
+		00ADEEB82A993885000B80CF /* TutorialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ADEEB72A993885000B80CF /* TutorialsViewController.swift */; };
+		00ADEEBA2A993AAF000B80CF /* AddTutorialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ADEEB92A993AAF000B80CF /* AddTutorialController.swift */; };
 		61114B0B2A97CC6100089933 /* SchoolPaperCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61114B0A2A97CC6100089933 /* SchoolPaperCollectionViewController.swift */; };
 		61114B0D2A97CC7300089933 /* TutorialCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61114B0C2A97CC7300089933 /* TutorialCollectionViewController.swift */; };
 		61171E792A98EB14004CE6BD /* LearningMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61171E782A98EB14004CE6BD /* LearningMaterial.swift */; };
@@ -68,6 +73,11 @@
 /* Begin PBXFileReference section */
 		001CF82C2A76740700BE969F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		001CF82E2A76E30900BE969F /* ProfileHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHelpViewController.swift; sourceTree = "<group>"; };
+		00ADEEB12A99239A000B80CF /* AddPastPaperController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPastPaperController.swift; sourceTree = "<group>"; };
+		00ADEEB32A99336E000B80CF /* AddSchoolPaperController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSchoolPaperController.swift; sourceTree = "<group>"; };
+		00ADEEB52A9935AE000B80CF /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
+		00ADEEB72A993885000B80CF /* TutorialsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialsViewController.swift; sourceTree = "<group>"; };
+		00ADEEB92A993AAF000B80CF /* AddTutorialController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTutorialController.swift; sourceTree = "<group>"; };
 		61114B0A2A97CC6100089933 /* SchoolPaperCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolPaperCollectionViewController.swift; sourceTree = "<group>"; };
 		61114B0C2A97CC7300089933 /* TutorialCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialCollectionViewController.swift; sourceTree = "<group>"; };
 		61171E782A98EB14004CE6BD /* LearningMaterial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningMaterial.swift; sourceTree = "<group>"; };
@@ -199,6 +209,11 @@
 				61114B0A2A97CC6100089933 /* SchoolPaperCollectionViewController.swift */,
 				61114B0C2A97CC7300089933 /* TutorialCollectionViewController.swift */,
 				61171E802A98ED5A004CE6BD /* CollectionViewCell.swift */,
+				00ADEEB12A99239A000B80CF /* AddPastPaperController.swift */,
+				00ADEEB32A99336E000B80CF /* AddSchoolPaperController.swift */,
+				00ADEEB52A9935AE000B80CF /* OverviewViewController.swift */,
+				00ADEEB72A993885000B80CF /* TutorialsViewController.swift */,
+				00ADEEB92A993AAF000B80CF /* AddTutorialController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -405,6 +420,7 @@
 				61171E792A98EB14004CE6BD /* LearningMaterial.swift in Sources */,
 				B9EAD2A7257AA6E7005B00FC /* MortgageViewController.swift in Sources */,
 				B940A823257DB1CC004736AB /* AmortizedData.swift in Sources */,
+				00ADEEB22A99239A000B80CF /* AddPastPaperController.swift in Sources */,
 				61171E7B2A98EBEC004CE6BD /* PastPaper.swift in Sources */,
 				61114B0B2A97CC6100089933 /* SchoolPaperCollectionViewController.swift in Sources */,
 				B940A821257DA786004736AB /* AmortizedDataView.swift in Sources */,
@@ -417,6 +433,7 @@
 				B9FFF5772579A9F70036AC75 /* MainViewController.swift in Sources */,
 				B9EAD2D0257D4CC6005B00FC /* HelpViewController.swift in Sources */,
 				B9EAD2B8257AE7AD005B00FC /* HomeButtonView.swift in Sources */,
+				00ADEEB82A993885000B80CF /* TutorialsViewController.swift in Sources */,
 				B9EAD2D4257D5259005B00FC /* LoanHelpViewController.swift in Sources */,
 				B9EAD2BA257B173B005B00FC /* HomeButton.swift in Sources */,
 				B9EAD2A9257AAADE005B00FC /* TabBarController.swift in Sources */,
@@ -424,10 +441,13 @@
 				B9EAD2C3257BBEB0005B00FC /* ScrollViewController.swift in Sources */,
 				B9EAD2D2257D5248005B00FC /* SavingHelpViewController.swift in Sources */,
 				B9EAD2AB257AAB64005B00FC /* SavingsViewController.swift in Sources */,
+				00ADEEB42A99336E000B80CF /* AddSchoolPaperController.swift in Sources */,
 				B9EAD2CB257CF15E005B00FC /* UITextFields.swift in Sources */,
 				B9EAD2AD257AAB73005B00FC /* LoanViewController.swift in Sources */,
 				61114B0D2A97CC7300089933 /* TutorialCollectionViewController.swift in Sources */,
+				00ADEEBA2A993AAF000B80CF /* AddTutorialController.swift in Sources */,
 				B940A81F257DA543004736AB /* AmortizedDataController.swift in Sources */,
+				00ADEEB62A9935AE000B80CF /* OverviewViewController.swift in Sources */,
 				B9EAD2C9257CE3BC005B00FC /* CommonFunctions.swift in Sources */,
 				B9FFF5732579A9F70036AC75 /* AppDelegate.swift in Sources */,
 				61171E7D2A98EC57004CE6BD /* Tutorial.swift in Sources */,
