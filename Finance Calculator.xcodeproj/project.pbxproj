@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		001CF82D2A76740700BE969F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001CF82C2A76740700BE969F /* ProfileViewController.swift */; };
 		001CF82F2A76E30900BE969F /* ProfileHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001CF82E2A76E30900BE969F /* ProfileHelpViewController.swift */; };
+		00EBEE322A93DA4800617F8F /* PastPapersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EBEE312A93DA4800617F8F /* PastPapersViewController.swift */; };
+		00EBEE342A93DA9300617F8F /* PastPapersHelpViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EBEE332A93DA9300617F8F /* PastPapersHelpViewContoller.swift */; };
+		00EBEE392A93F46200617F8F /* PastPapersData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EBEE382A93F46200617F8F /* PastPapersData+CoreDataClass.swift */; };
+		00EBEE3B2A93F4CD00617F8F /* PastPapersData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EBEE3A2A93F4CD00617F8F /* PastPapersData+CoreDataProperties.swift */; };
 		B940A81F257DA543004736AB /* AmortizedDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B940A81E257DA543004736AB /* AmortizedDataController.swift */; };
 		B940A821257DA786004736AB /* AmortizedDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B940A820257DA786004736AB /* AmortizedDataView.swift */; };
 		B940A823257DB1CC004736AB /* AmortizedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B940A822257DB1CC004736AB /* AmortizedData.swift */; };
@@ -60,6 +64,10 @@
 /* Begin PBXFileReference section */
 		001CF82C2A76740700BE969F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		001CF82E2A76E30900BE969F /* ProfileHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHelpViewController.swift; sourceTree = "<group>"; };
+		00EBEE312A93DA4800617F8F /* PastPapersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastPapersViewController.swift; sourceTree = "<group>"; };
+		00EBEE332A93DA9300617F8F /* PastPapersHelpViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastPapersHelpViewContoller.swift; sourceTree = "<group>"; };
+		00EBEE382A93F46200617F8F /* PastPapersData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PastPapersData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		00EBEE3A2A93F4CD00617F8F /* PastPapersData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PastPapersData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B940A81E257DA543004736AB /* AmortizedDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmortizedDataController.swift; sourceTree = "<group>"; };
 		B940A820257DA786004736AB /* AmortizedDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmortizedDataView.swift; sourceTree = "<group>"; };
 		B940A822257DB1CC004736AB /* AmortizedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmortizedData.swift; sourceTree = "<group>"; };
@@ -175,6 +183,8 @@
 				B940A81E257DA543004736AB /* AmortizedDataController.swift */,
 				001CF82C2A76740700BE969F /* ProfileViewController.swift */,
 				001CF82E2A76E30900BE969F /* ProfileHelpViewController.swift */,
+				00EBEE312A93DA4800617F8F /* PastPapersViewController.swift */,
+				00EBEE332A93DA9300617F8F /* PastPapersHelpViewContoller.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -191,6 +201,8 @@
 		B9FFF5662579A9F70036AC75 = {
 			isa = PBXGroup;
 			children = (
+				00EBEE3A2A93F4CD00617F8F /* PastPapersData+CoreDataProperties.swift */,
+				00EBEE382A93F46200617F8F /* PastPapersData+CoreDataClass.swift */,
 				B9EAD2DF257D98DF005B00FC /* SavingsData+CoreDataClass.swift */,
 				B9EAD2E0257D98DF005B00FC /* SavingsData+CoreDataProperties.swift */,
 				B9FFF5712579A9F70036AC75 /* Finance Calculator */,
@@ -385,8 +397,10 @@
 				B9EAD2D6257D526D005B00FC /* MortgageHelpViewController.swift in Sources */,
 				001CF82D2A76740700BE969F /* ProfileViewController.swift in Sources */,
 				B9FFF57D2579A9F70036AC75 /* Finance_Calculator.xcdatamodeld in Sources */,
+				00EBEE3B2A93F4CD00617F8F /* PastPapersData+CoreDataProperties.swift in Sources */,
 				001CF82F2A76E30900BE969F /* ProfileHelpViewController.swift in Sources */,
 				B9FFF5772579A9F70036AC75 /* MainViewController.swift in Sources */,
+				00EBEE392A93F46200617F8F /* PastPapersData+CoreDataClass.swift in Sources */,
 				B9EAD2D0257D4CC6005B00FC /* HelpViewController.swift in Sources */,
 				B9EAD2B8257AE7AD005B00FC /* HomeButtonView.swift in Sources */,
 				B9EAD2D4257D5259005B00FC /* LoanHelpViewController.swift in Sources */,
@@ -400,8 +414,10 @@
 				B940A81F257DA543004736AB /* AmortizedDataController.swift in Sources */,
 				B9EAD2C9257CE3BC005B00FC /* CommonFunctions.swift in Sources */,
 				B9FFF5732579A9F70036AC75 /* AppDelegate.swift in Sources */,
+				00EBEE322A93DA4800617F8F /* PastPapersViewController.swift in Sources */,
 				B9FFF5752579A9F70036AC75 /* SceneDelegate.swift in Sources */,
 				B9EAD2E2257D98DF005B00FC /* SavingsData+CoreDataProperties.swift in Sources */,
+				00EBEE342A93DA9300617F8F /* PastPapersHelpViewContoller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

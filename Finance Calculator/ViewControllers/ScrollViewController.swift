@@ -57,9 +57,13 @@ class ScrollViewController: UIViewController {
         {
             childVC = storyboard.instantiateViewController(withIdentifier: "loanVC")
         }
-        else
+        else if(index == 3)
         {
             childVC = storyboard.instantiateViewController(withIdentifier: "profileVC")
+        }
+        else
+        {
+            childVC = storyboard.instantiateViewController(withIdentifier: "pastPapersVC")
         }
         addChild(childVC)
         containerView.addSubview(childVC.view)

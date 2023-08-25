@@ -37,6 +37,7 @@ class TabBarController: UITabBarController {
         let savingsItem = UITabBarItem(title: NSLocalizedString("savings", comment: ""),image: UIImage(named: "SavingsLine.png"), selectedImage: UIImage(named: "SavingsFill.png"))
         let loanItem = UITabBarItem(title: NSLocalizedString("loan", comment: ""),image: UIImage(named: "LoansLine.png"), selectedImage: UIImage(named: "LoansFill.png"))
         let profileItem = UITabBarItem(title: NSLocalizedString("profile", comment: ""),image: UIImage(named: "LoansLine.png"), selectedImage: UIImage(named: "LoansFill.png"))
+        let pastPapersItem = UITabBarItem(title: NSLocalizedString("pastPapers", comment: ""),image: UIImage(named: "LoansLine.png"), selectedImage: UIImage(named: "LoansFill.png"))
         
         // view controllers are embedded in a parent which has a scrollview - ScrollViewController
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -44,20 +45,23 @@ class TabBarController: UITabBarController {
         let updateMortgageVC = storyboard.instantiateViewController(withIdentifier: "scrollVC")
         let updateLoanVC = storyboard.instantiateViewController(withIdentifier: "scrollVC")
         let updateProfileVC = storyboard.instantiateViewController(withIdentifier: "scrollVC")
+        let updatePastPapersVC = storyboard.instantiateViewController(withIdentifier: "scrollVC")
     
         updateMortgageVC.tabBarItem = mortgageItem
         updateSavingsVC.tabBarItem = savingsItem
         updateLoanVC.tabBarItem = loanItem
         updateProfileVC.tabBarItem = profileItem
+        updatePastPapersVC.tabBarItem = pastPapersItem
         
         // pass the index to ScrollViewController in order to load the child controller view, in container
         (updateSavingsVC as! ScrollViewController).selectedTabIndex = 0
         (updateMortgageVC as! ScrollViewController).selectedTabIndex = 1
         (updateLoanVC as! ScrollViewController).selectedTabIndex = 2
         (updateProfileVC as! ScrollViewController).selectedTabIndex = 3
+        (updatePastPapersVC as! ScrollViewController).selectedTabIndex = 4
 
         // programatically setting view controllers in tab bar
-        let tabControllers = [updateSavingsVC,updateMortgageVC,updateLoanVC,updateProfileVC]
+        let tabControllers = [updateSavingsVC,updateMortgageVC,updateLoanVC,updateProfileVC,updatePastPapersVC]
         self.viewControllers = tabControllers
         self.selectedIndex = selectedPassedIndex
     }

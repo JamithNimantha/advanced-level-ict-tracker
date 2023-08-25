@@ -54,6 +54,7 @@ class MainViewController: UIViewController {
         buttonList.append(HomeButton(title: NSLocalizedString("loan", comment: ""),photoName: "LoanMain.png"))
         buttonList.append(HomeButton(title: NSLocalizedString("profile", comment: ""),photoName: "ProfileMain.png"))
         buttonList.append(HomeButton(title: NSLocalizedString("help", comment: ""),photoName: "HelpMain.png"))
+        buttonList.append(HomeButton(title: NSLocalizedString("pastPapers", comment: ""),photoName: "HelpMain.png"))
     }
     
     func animations()

@@ -31,6 +31,7 @@ class HelpViewController: UIPageViewController {
         orderedViewControllers.append(storyboard.instantiateViewController(withIdentifier:"mortgageHelpVC"))
         orderedViewControllers.append(storyboard.instantiateViewController(withIdentifier:"loanHelpVC"))
         orderedViewControllers.append(storyboard.instantiateViewController(withIdentifier:"profileHelpVC"))
+        orderedViewControllers.append(storyboard.instantiateViewController(withIdentifier:"pastPapersHelpVC"))
         
         if let firstViewController = orderedViewControllers.first {
             setViewControllers([firstViewController],direction: .forward, animated: true, completion: nil)
