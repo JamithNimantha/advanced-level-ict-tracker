@@ -33,31 +33,31 @@ class TabBarController: UITabBarController {
         self.view.backgroundColor = UIColor.backgroundColor()
 
         // set tab bar items programatically
-        let mortgageItem = UITabBarItem(title: NSLocalizedString("mortgage", comment: ""), image: UIImage(named: "MortgageLine.png"), selectedImage: UIImage(named: "MortgageFill.png"))
-        let savingsItem = UITabBarItem(title: NSLocalizedString("savings", comment: ""),image: UIImage(named: "SavingsLine.png"), selectedImage: UIImage(named: "SavingsFill.png"))
-        let loanItem = UITabBarItem(title: NSLocalizedString("loan", comment: ""),image: UIImage(named: "LoansLine.png"), selectedImage: UIImage(named: "LoansFill.png"))
-        let profileItem = UITabBarItem(title: NSLocalizedString("profile", comment: ""),image: UIImage(named: "LoansLine.png"), selectedImage: UIImage(named: "LoansFill.png"))
+        let pastPapersItem = UITabBarItem(title: NSLocalizedString("Past Papers", comment: ""), image: UIImage(named: "MortgageLine.png"), selectedImage: UIImage(named: "MortgageFill.png"))
+        let schoolPapersItem = UITabBarItem(title: NSLocalizedString("School Papers", comment: ""),image: UIImage(named: "SavingsLine.png"), selectedImage: UIImage(named: "SavingsFill.png"))
+        let tutorialItem = UITabBarItem(title: NSLocalizedString("Tutorials", comment: ""),image: UIImage(named: "LoansLine.png"), selectedImage: UIImage(named: "LoansFill.png"))
+        let profileItem = UITabBarItem(title: NSLocalizedString("Profile", comment: ""),image: UIImage(named: "LoansLine.png"), selectedImage: UIImage(named: "LoansFill.png"))
         
         // view controllers are embedded in a parent which has a scrollview - ScrollViewController
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let updateSavingsVC = storyboard.instantiateViewController(withIdentifier: "scrollVC")
-        let updateMortgageVC = storyboard.instantiateViewController(withIdentifier: "scrollVC")
-        let updateLoanVC = storyboard.instantiateViewController(withIdentifier: "scrollVC")
+        let updatePastPapersVC = storyboard.instantiateViewController(withIdentifier: "scrollVC")
+        let updateSchoolPapersVC = storyboard.instantiateViewController(withIdentifier: "scrollVC")
+        let updateTutorialsVC = storyboard.instantiateViewController(withIdentifier: "scrollVC")
         let updateProfileVC = storyboard.instantiateViewController(withIdentifier: "scrollVC")
     
-        updateMortgageVC.tabBarItem = mortgageItem
-        updateSavingsVC.tabBarItem = savingsItem
-        updateLoanVC.tabBarItem = loanItem
+        updatePastPapersVC.tabBarItem = pastPapersItem
+        updateSchoolPapersVC.tabBarItem = schoolPapersItem
+        updateTutorialsVC.tabBarItem = tutorialItem
         updateProfileVC.tabBarItem = profileItem
         
         // pass the index to ScrollViewController in order to load the child controller view, in container
-        (updateSavingsVC as! ScrollViewController).selectedTabIndex = 0
-        (updateMortgageVC as! ScrollViewController).selectedTabIndex = 1
-        (updateLoanVC as! ScrollViewController).selectedTabIndex = 2
+        (updatePastPapersVC as! ScrollViewController).selectedTabIndex = 0
+        (updateSchoolPapersVC as! ScrollViewController).selectedTabIndex = 1
+        (updateTutorialsVC as! ScrollViewController).selectedTabIndex = 2
         (updateProfileVC as! ScrollViewController).selectedTabIndex = 3
 
         // programatically setting view controllers in tab bar
-        let tabControllers = [updateSavingsVC,updateMortgageVC,updateLoanVC,updateProfileVC]
+        let tabControllers = [updatePastPapersVC,updateSchoolPapersVC,updateTutorialsVC,updateProfileVC]
         self.viewControllers = tabControllers
         self.selectedIndex = selectedPassedIndex
     }

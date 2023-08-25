@@ -47,15 +47,15 @@ class ScrollViewController: UIViewController {
         var childVC: UIViewController
         if(index == 0)
         {
-            childVC = storyboard.instantiateViewController(withIdentifier: "savingsVC")
+            childVC = storyboard.instantiateViewController(withIdentifier: "pastPapersVC")
         }
         else if(index == 1)
         {
-            childVC = storyboard.instantiateViewController(withIdentifier: "mortgageVC")
+            childVC = storyboard.instantiateViewController(withIdentifier: "schoolPapersVC")
         }
         else if(index == 2)
         {
-            childVC = storyboard.instantiateViewController(withIdentifier: "loanVC")
+            childVC = storyboard.instantiateViewController(withIdentifier: "tutorialsVC")
         }
         else
         {
