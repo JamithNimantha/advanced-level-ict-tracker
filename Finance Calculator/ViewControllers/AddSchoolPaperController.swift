@@ -17,10 +17,30 @@ class AddSchoolPaperController: UIViewController {
     @IBOutlet weak var duration: UITextField!
     @IBOutlet weak var paper: UITextField!
     
+    var context: NSManagedObjectContext? {
+        guard let appDelegate =
+        UIApplication.shared.delegate as? AppDelegate else {
+            return nil
+        }
+        return appDelegate.persistentContainer.viewContext
+    }
+    
     @IBAction func onAddPaper(_ sender: Any) {
+        guard let year = year.text,
+                      let marks = marks.text,
+                      let duration = duration.text,
+                      let paper = paper.text else {
+                    return
+                }
+        savePaper(_year: year, _marks: marks, _date: dateToString(date: Date()), _duration: duration, _url: "https://www.google.com", _paper: paper)
         displaySuccessAlert()
     }
     
+    func dateToString(date: Date, format: String = "yyyy-MM-dd") -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        return dateFormatter.string(from: date)
+    }
     
     func displaySuccessAlert()
     {
@@ -43,5 +63,28 @@ class AddSchoolPaperController: UIViewController {
     {
         field.text=""
         field.clear()
+    }
+    func savePaper(_year: String, _marks: String, _date: String, _duration: String, _url: String, _paper: String) {
+        
+        guard let context = context else {
+                    return
+                }
+                
+        if let pastPaperEntity = NSEntityDescription.entity(forEntityName: "PastPaperData", in: context) {
+            let pastPaper = NSManagedObject(entity: pastPaperEntity, insertInto: context)
+            pastPaper.setValue(_year, forKey: "year")
+            pastPaper.setValue(_marks, forKey: "marks")
+            pastPaper.setValue(_date, forKey: "date")
+            pastPaper.setValue(_duration, forKey: "duration")
+            pastPaper.setValue(_url, forKey: "url")
+            pastPaper.setValue(_paper, forKey: "paper")
+            pastPaper.setValue("SCHOOL_PAPER", forKey: "category")
+            
+            do {
+                try context.save()
+            } catch let error as NSError {
+                print("Could not save. \(error), \(error.userInfo)")
+            }
+        }
     }
 }
