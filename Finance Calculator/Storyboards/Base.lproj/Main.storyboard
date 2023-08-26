@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UYG-cA-baO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UYG-cA-baO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -71,13 +71,13 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghq-yB-hBV">
                                         <rect key="frame" x="136.5" y="55.5" width="141.5" height="34.5"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.42352941176470588" green="0.2627450980392157" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Financial Calculator App" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jba-UG-A4z">
-                                        <rect key="frame" x="126" y="92.5" width="162" height="17.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Advanced Level ICT Tracker" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jba-UG-A4z">
+                                        <rect key="frame" x="112.5" y="92.5" width="189.5" height="17.5"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.42352941176470588" green="0.2627450980392157" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -126,8 +126,8 @@
                                 </variation>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wEm-I5-F6e">
-                                <rect key="frame" x="0.0" y="170" width="414" height="726"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="150" width="414" height="746"/>
+                                <color key="backgroundColor" red="0.97647058823529409" green="0.84313725490196079" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" systemColor="systemIndigoColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WxS-sy-yQ7">
                                     <size key="itemSize" width="128" height="128"/>
@@ -176,14 +176,14 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7d8-0G-EaJ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
                         <constraints>
-                            <constraint firstItem="wEm-I5-F6e" firstAttribute="top" secondItem="sbZ-Yc-gOI" secondAttribute="bottom" constant="20" id="46r-W0-JrE"/>
                             <constraint firstItem="sbZ-Yc-gOI" firstAttribute="width" secondItem="Uyk-qe-6Xj" secondAttribute="width" id="4KC-oY-DLq"/>
                             <constraint firstAttribute="trailing" secondItem="wEm-I5-F6e" secondAttribute="trailing" id="4ph-lm-i2s"/>
                             <constraint firstItem="sbZ-Yc-gOI" firstAttribute="top" secondItem="Uyk-qe-6Xj" secondAttribute="top" id="97r-Hc-laX"/>
                             <constraint firstItem="wEm-I5-F6e" firstAttribute="width" secondItem="Uyk-qe-6Xj" secondAttribute="width" id="ZBy-In-8v3"/>
                             <constraint firstItem="sbZ-Yc-gOI" firstAttribute="trailing" secondItem="Uyk-qe-6Xj" secondAttribute="trailing" id="Zk9-Vc-xqi"/>
+                            <constraint firstItem="wEm-I5-F6e" firstAttribute="top" secondItem="sbZ-Yc-gOI" secondAttribute="bottom" id="gz2-ZT-nYA"/>
                             <constraint firstItem="wEm-I5-F6e" firstAttribute="leading" secondItem="Uyk-qe-6Xj" secondAttribute="leading" id="h60-B7-1ci"/>
                             <constraint firstItem="sbZ-Yc-gOI" firstAttribute="leading" secondItem="Uyk-qe-6Xj" secondAttribute="leading" id="sBP-sT-SPL"/>
                             <constraint firstAttribute="bottom" secondItem="wEm-I5-F6e" secondAttribute="bottom" id="toj-Ep-69t"/>
@@ -833,7 +833,7 @@
             <objects>
                 <tableViewController id="FMR-DL-P4n" customClass="AmortizedDataController" customModule="Finance_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3Fy-Hv-U7s">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="separatorColor" red="0.16862745100000001" green="0.51372549020000002" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1168,14 +1168,14 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell1" id="ODe-ny-Fxh" customClass="CollectionViewCell" customModule="Finance_Calculator" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="109.5" height="148.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="119.5" height="158.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vqV-qr-6ZE">
-                                            <rect key="frame" x="0.0" y="0.0" width="109.5" height="148.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="119.5" height="158.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Fjl-67-mjD">
-                                                    <rect key="frame" x="0.0" y="0.0" width="109.5" height="148.5"/>
+                                                    <rect key="frame" x="5" y="5" width="109.5" height="148.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tO-KY-YYu">
                                                             <rect key="frame" x="34" y="0.0" width="41.5" height="20.5"/>
@@ -1216,11 +1216,13 @@
                                                     <color key="backgroundColor" red="1" green="0.84705882349999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </stackView>
                                             </subviews>
+                                            <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                            <color key="tintColor" red="1" green="0.84705882349999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
-                                                <constraint firstItem="Fjl-67-mjD" firstAttribute="top" secondItem="vqV-qr-6ZE" secondAttribute="top" id="7QB-SD-ggK"/>
-                                                <constraint firstAttribute="trailing" secondItem="Fjl-67-mjD" secondAttribute="trailing" id="83c-T0-fmn"/>
-                                                <constraint firstAttribute="bottom" secondItem="Fjl-67-mjD" secondAttribute="bottom" id="VOG-6b-nNa"/>
-                                                <constraint firstItem="Fjl-67-mjD" firstAttribute="leading" secondItem="vqV-qr-6ZE" secondAttribute="leading" id="fV9-QJ-6Pp"/>
+                                                <constraint firstItem="Fjl-67-mjD" firstAttribute="top" secondItem="vqV-qr-6ZE" secondAttribute="top" constant="5" id="Bda-g9-btJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="Fjl-67-mjD" secondAttribute="bottom" constant="5" id="Q5w-3e-S6D"/>
+                                                <constraint firstAttribute="trailing" secondItem="Fjl-67-mjD" secondAttribute="trailing" constant="5" id="UNf-mm-4EZ"/>
+                                                <constraint firstItem="Fjl-67-mjD" firstAttribute="leading" secondItem="vqV-qr-6ZE" secondAttribute="leading" constant="5" id="eOi-09-TGz"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
@@ -1338,14 +1340,14 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell2" id="mQW-I9-Iz4" customClass="CollectionViewCell" customModule="Finance_Calculator" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="109.5" height="148.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="119.5" height="158.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="FLR-d8-EgR">
-                                            <rect key="frame" x="0.0" y="0.0" width="109.5" height="148.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="119.5" height="158.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gV3-3y-PX6">
-                                                    <rect key="frame" x="0.0" y="0.0" width="109.5" height="148.5"/>
+                                                    <rect key="frame" x="5" y="5" width="109.5" height="148.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ee0-Xb-Rm4">
                                                             <rect key="frame" x="34" y="0.0" width="41.5" height="20.5"/>
@@ -1387,10 +1389,10 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="gV3-3y-PX6" secondAttribute="bottom" id="6TS-3v-Jld"/>
-                                                <constraint firstAttribute="trailing" secondItem="gV3-3y-PX6" secondAttribute="trailing" id="DB4-1R-3SB"/>
-                                                <constraint firstItem="gV3-3y-PX6" firstAttribute="top" secondItem="FLR-d8-EgR" secondAttribute="top" id="jib-ZF-JN9"/>
-                                                <constraint firstItem="gV3-3y-PX6" firstAttribute="leading" secondItem="FLR-d8-EgR" secondAttribute="leading" id="lHq-HN-LUM"/>
+                                                <constraint firstAttribute="bottom" secondItem="gV3-3y-PX6" secondAttribute="bottom" constant="5" id="1ci-U1-u3e"/>
+                                                <constraint firstItem="gV3-3y-PX6" firstAttribute="top" secondItem="FLR-d8-EgR" secondAttribute="top" constant="5" id="GF7-tv-aI0"/>
+                                                <constraint firstAttribute="trailing" secondItem="gV3-3y-PX6" secondAttribute="trailing" constant="5" id="kFF-4X-O9C"/>
+                                                <constraint firstItem="gV3-3y-PX6" firstAttribute="leading" secondItem="FLR-d8-EgR" secondAttribute="leading" constant="5" id="pw5-ma-z8l"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
@@ -1465,14 +1467,14 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell3" id="OFV-M8-fFp" customClass="CollectionViewCell" customModule="Finance_Calculator" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="109.5" height="148.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="119.5" height="158.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mfM-ic-Fcm">
-                                            <rect key="frame" x="0.0" y="0.0" width="109.5" height="148.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="119.5" height="158.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="H5E-ku-Ipp">
-                                                    <rect key="frame" x="0.0" y="0.0" width="109.5" height="148.5"/>
+                                                    <rect key="frame" x="5" y="5" width="109.5" height="148.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aiD-iv-JcT">
                                                             <rect key="frame" x="34" y="0.0" width="41.5" height="20.5"/>
@@ -1515,10 +1517,10 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="H5E-ku-Ipp" secondAttribute="trailing" id="7jr-tH-X7a"/>
-                                                <constraint firstItem="H5E-ku-Ipp" firstAttribute="leading" secondItem="mfM-ic-Fcm" secondAttribute="leading" id="Q9F-sF-wow"/>
-                                                <constraint firstItem="H5E-ku-Ipp" firstAttribute="top" secondItem="mfM-ic-Fcm" secondAttribute="top" id="VZu-8s-20g"/>
-                                                <constraint firstAttribute="bottom" secondItem="H5E-ku-Ipp" secondAttribute="bottom" id="rdj-QH-cKZ"/>
+                                                <constraint firstItem="H5E-ku-Ipp" firstAttribute="top" secondItem="mfM-ic-Fcm" secondAttribute="top" constant="5" id="1jA-lq-llZ"/>
+                                                <constraint firstItem="H5E-ku-Ipp" firstAttribute="leading" secondItem="mfM-ic-Fcm" secondAttribute="leading" constant="5" id="5zl-rU-aNR"/>
+                                                <constraint firstAttribute="bottom" secondItem="H5E-ku-Ipp" secondAttribute="bottom" constant="5" id="ofV-0s-mtj"/>
+                                                <constraint firstAttribute="trailing" secondItem="H5E-ku-Ipp" secondAttribute="trailing" constant="5" id="yWv-tV-gYt"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
@@ -1559,7 +1561,7 @@
             <objects>
                 <viewController id="Wl1-hz-cJA" userLabel="Add Past Papers" customClass="AddPastPaperController" customModule="Finance_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cQu-dF-OMu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Past Papers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aM4-pT-vG6">
@@ -1666,7 +1668,7 @@
             <objects>
                 <viewController id="zCS-kG-xrs" userLabel="Add School Papers" customClass="AddSchoolPaperController" customModule="Finance_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KLx-94-Kix">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add School Papers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quZ-l7-naq">
@@ -1773,7 +1775,7 @@
             <objects>
                 <viewController id="6hC-bI-R4J" userLabel="Add Tutorials" customClass="AddTutorialController" customModule="Finance_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7NT-Sc-ylO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Tutorials" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXU-5R-XQi">
@@ -1883,7 +1885,7 @@
         <image name="MortgageMain" width="540" height="540"/>
         <image name="Past-Papers" width="256" height="256"/>
         <image name="SavingsMain" width="540" height="540"/>
-        <image name="Splash2" width="728" height="429"/>
+        <image name="Splash2" width="799.5" height="531.5"/>
         <image name="profile3" width="298.5" height="347"/>
         <image name="school-papers" width="275" height="183"/>
         <systemColor name="linkColor">
