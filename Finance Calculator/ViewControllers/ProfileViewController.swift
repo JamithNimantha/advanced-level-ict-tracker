@@ -8,6 +8,7 @@
 import UIKit
 import Foundation
 import CoreData
+//import Charts
 
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -15,6 +16,8 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var schoolPaperView: UIView!
     @IBOutlet weak var tutorialView: UIView!
+    
+    //var barChartView: BarChartView!
     
     var context: NSManagedObjectContext? {
         guard let appDelegate =
@@ -49,7 +52,11 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        generateMockData()
+//        generateMockData()
+//        fetchSchoolPaperData()
+        fetchSchoolPaperData()
+        fetchTutorialPaperData()
+        fetchPastPaperData()
         loadCardViews()
         calculateAndAssignStatistics()
 //        let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(pastPapersViewDoubleTapped))
@@ -168,7 +175,19 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
 
     
     override func viewWillAppear(_ animated: Bool) {
+       super.viewWillAppear(animated)
+        fetchSchoolPaperData()
+        fetchTutorialPaperData()
+        fetchPastPaperData()
        navigationController?.navigationBar.topItem!.title = NSLocalizedString("profile", comment: "")
+       
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+            super.viewDidAppear(animated)
+            fetchSchoolPaperData()
+            fetchTutorialPaperData()
+            fetchPastPaperData()
     }
     
     func calculateStatistics(for papers: [Paper]) -> (total: Int, average: Double, min: Double, max: Double)? {
@@ -202,28 +221,30 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             ]
         }
     
-    func fetchStoredData()
+    func fetchSchoolPaperData()
     {
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName:"SavingsData")
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName:"PastPaperData")
         do
         {
-            let savingData = try self.context?.fetch(request) as! [SavingsData]
-            if(savingData.count > 0 ){
+            let savingData = try self.context?.fetch(request) as! [PastPaperData]
+            if(savingData.count > 0 )
+            {
             
-                savingData.forEach {savingDataObj in
-                
-//                     print("--------------------------")
-//                     print("Id",savingDataObj.id ?? "")
-//                     print("Present Value",savingDataObj.presentValue)
-//                     print("Future Value",savingDataObj.futureValue)
-//                     print("Interest Value",savingDataObj.interest)
-//                     print("Compunds perYear",savingDataObj.compundsPerYear)
-//                     print("Payments PerYear",savingDataObj.paymentsPerYear)
-//                     print("Payment",savingDataObj.payment)
-//                     print("Payment Made At",savingDataObj.paymentMadeAt)
+                schoolPapers = savingData
+                    .filter{data in return data.category == "SCHOOL_PAPER"}
+                    .compactMap { data in
+                                        guard let year = data.year,
+                                              let marksString = data.marks,
+                                              let marks = Int(marksString),
+                                              let dateString = data.date,
+                                              let date = dateFromString(dateString) else {
+                                            return nil
+                                        }
+                                        
+                                        return Paper(name: year,
+                                                     date: date,
+                                                     marks: marks)
                 }
- 
-
             }
             else
             {
@@ -235,4 +256,83 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             print("Error in fetching items")
         }
     }
+    
+    func dateFromString(_ dateString: String) -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return dateFormatter.date(from: dateString)
+    }
+    
+    func fetchPastPaperData()
+    {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName:"PastPaperData")
+        do
+        {
+            let savingData = try self.context?.fetch(request) as! [PastPaperData]
+            if(savingData.count > 0 )
+            {
+            
+                pastPapers = savingData
+                    .filter{data in return data.category == "PAST_PAPER"}
+                    .compactMap { data in
+                                        guard let year = data.year,
+                                              let marksString = data.marks,
+                                              let marks = Int(marksString),
+                                              let dateString = data.date,
+                                              let date = dateFromString(dateString) else {
+                                            return nil
+                                        }
+                                        
+                                        return Paper(name: year,
+                                                     date: date,
+                                                     marks: marks)
+                }
+            }
+            else
+            {
+                print("No results found")
+            }
+        }
+        catch
+        {
+            print("Error in fetching items")
+        }
+    }
+    
+    func fetchTutorialPaperData()
+    {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName:"PastPaperData")
+        do
+        {
+            let savingData = try self.context?.fetch(request) as! [PastPaperData]
+            if(savingData.count > 0 )
+            {
+            
+                tutorialPapers = savingData
+                    .filter{data in return data.category == "TUTORIAL"}
+                    .compactMap { data in
+                                        guard let year = data.year,
+                                              let marksString = data.marks,
+                                              let marks = Int(marksString),
+                                              let dateString = data.date,
+                                              let date = dateFromString(dateString) else {
+                                            return nil
+                                        }
+                                        
+                                        return Paper(name: year,
+                                                     date: date,
+                                                     marks: marks)
+                }
+            }
+            else
+            {
+                print("No results found")
+            }
+        }
+        catch
+        {
+            print("Error in fetching items")
+        }
+    }
+    
 }
