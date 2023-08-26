@@ -8,6 +8,8 @@
 import UIKit
 import Foundation
 import CoreData
+//import Alamofire
+
 //import Charts
 
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -62,7 +64,27 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
 //        let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(pastPapersViewDoubleTapped))
 //        doubleTapGesture.numberOfTapsRequired = 2
 //        pastPapersView.addGestureRecognizer(doubleTapGesture)
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(pastPapersViewTapped))
+        pastPapersView.addGestureRecognizer(tapGesture)
+        let tapGesture1 = UITapGestureRecognizer(target: self, action: #selector(schoolPapersViewTapped))
+        schoolPaperView.addGestureRecognizer(tapGesture1)
+        let tapGesture2 = UITapGestureRecognizer(target: self, action: #selector(tutoralPapersViewTapped))
+        tutorialView.addGestureRecognizer(tapGesture2)
+
     }
+    
+    @objc func schoolPapersViewTapped() {
+        generateChartDataForSchoolPapers()
+    }
+    
+    @objc func pastPapersViewTapped() {
+        generateChartDataForPastPapers()
+    }
+    
+    @objc func tutoralPapersViewTapped() {
+        generateChartDataForTutorials()
+    }
+
     
 //    @objc func pastPapersViewDoubleTapped() {
 //        let storyboard = UIStoryboard(name: "Main", bundle: nil) // Use your storyboard name
@@ -71,6 +93,163 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
 //            present(barChartVC, animated: true, completion: nil)
 //        }
 //    }
+    
+
+    func generateChartDataForPastPapers() {
+        let chartData = """
+        {
+            "type": "line",
+            "data": {
+                "labels": ["2023-08-25", "2023-08-26", "2023-08-27", "2023-08-28", "2023-08-29"],
+                "datasets": [
+                    {
+                        "label": "Marks",
+                        "backgroundColor": "rgb(255, 99, 132)",
+                        "borderColor": "rgb(255, 99, 132)",
+                        "data": [50, 55, 50, 70, 80],
+                        "fill": false
+                    }
+                ]
+            },
+            "options": {
+                "scales": {
+                    "xAxes": [{
+                        "ticks": {
+                            "minRotation": 90
+                        }
+                    }]
+                }
+            }
+        }
+        """
+
+        let encodedChartData = chartData.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+
+        let urlString = "https://quickchart.io/chart?c=\(encodedChartData)"
+
+        if let url = URL(string: urlString) {
+            let task = URLSession.shared.dataTask(with: url) { data, response, error in
+                if let data = data, let chartImage = UIImage(data: data) {
+                    if let resizedImage = chartImage.resized(to: CGSize(width: 300, height: 300)) {
+                        DispatchQueue.main.async {
+                            let chartPopup = UIAlertController(title: "Past Papers", message: nil, preferredStyle: .alert)
+                            chartPopup.addImage(resizedImage)
+                            chartPopup.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                            self.present(chartPopup, animated: true, completion: nil)
+                        }
+                    }
+                } else {
+                    print("Error fetching chart: \(error?.localizedDescription ?? "Unknown error")")
+                }
+            }
+            task.resume()
+        }
+    }
+    
+    func generateChartDataForTutorials() {
+        let chartData = """
+        {
+            "type": "line",
+            "data": {
+                "labels": ["2023-08-25", "2023-08-26", "2023-08-27", "2023-08-28", "2023-08-29"],
+                "datasets": [
+                    {
+                        "label": "Marks",
+                        "backgroundColor": "rgb(255, 99, 132)",
+                        "borderColor": "rgb(255, 99, 132)",
+                        "data": [40, 70, 30, 40, 60],
+                        "fill": false
+                    }
+                ]
+            },
+            "options": {
+                "scales": {
+                    "xAxes": [{
+                        "ticks": {
+                            "minRotation": 90
+                        }
+                    }]
+                }
+            }
+        }
+        """
+
+        let encodedChartData = chartData.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+
+        let urlString = "https://quickchart.io/chart?c=\(encodedChartData)"
+
+        if let url = URL(string: urlString) {
+            let task = URLSession.shared.dataTask(with: url) { data, response, error in
+                if let data = data, let chartImage = UIImage(data: data) {
+                    if let resizedImage = chartImage.resized(to: CGSize(width: 300, height: 300)) {
+                        DispatchQueue.main.async {
+                            let chartPopup = UIAlertController(title: "Tutorial", message: nil, preferredStyle: .alert)
+                            chartPopup.addImage(resizedImage)
+                            chartPopup.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                            self.present(chartPopup, animated: true, completion: nil)
+                        }
+                    }
+                } else {
+                    print("Error fetching chart: \(error?.localizedDescription ?? "Unknown error")")
+                }
+            }
+            task.resume()
+        }
+    }
+    
+    
+    func generateChartDataForSchoolPapers() {
+        let chartData = """
+        {
+            "type": "line",
+            "data": {
+                "labels": ["2023-08-25", "2023-08-26", "2023-08-27", "2023-08-28", "2023-08-29"],
+                "datasets": [
+                    {
+                        "label": "Marks",
+                        "backgroundColor": "rgb(255, 99, 132)",
+                        "borderColor": "rgb(255, 99, 132)",
+                        "data": [90, 80, 65, 85, 94],
+                        "fill": false
+                    }
+                ]
+            },
+            "options": {
+                "scales": {
+                    "xAxes": [{
+                        "ticks": {
+                            "minRotation": 90
+                        }
+                    }]
+                }
+            }
+        }
+        """
+
+        let encodedChartData = chartData.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+
+        let urlString = "https://quickchart.io/chart?c=\(encodedChartData)"
+
+        if let url = URL(string: urlString) {
+            let task = URLSession.shared.dataTask(with: url) { data, response, error in
+                if let data = data, let chartImage = UIImage(data: data) {
+                    if let resizedImage = chartImage.resized(to: CGSize(width: 300, height: 300)) {
+                        DispatchQueue.main.async {
+                            let chartPopup = UIAlertController(title: "School Papers", message: nil, preferredStyle: .alert)
+                            chartPopup.addImage(resizedImage)
+                            chartPopup.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                            self.present(chartPopup, animated: true, completion: nil)
+                        }
+                    }
+                } else {
+                    print("Error fetching chart: \(error?.localizedDescription ?? "Unknown error")")
+                }
+            }
+            task.resume()
+        }
+    }
+
+
     
     func setupUI() {
             profileImg.layer.cornerRadius = profileImg.frame.size.height / 2
@@ -172,6 +351,12 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             TPMaxMarks.text = "Max Marks: " + String(format: "%.2f", tpStats.max) + "%"
         }
     }
+    
+    func dateToString(date: Date, format: String = "yyyy-MM-dd") -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        return dateFormatter.string(from: date)
+    }
 
     
     override func viewWillAppear(_ animated: Bool) {
@@ -245,6 +430,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
                                                      date: date,
                                                      marks: marks)
                 }
+                .sorted { $0.date < $1.date }
             }
             else
             {
@@ -287,6 +473,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
                                                      date: date,
                                                      marks: marks)
                 }
+                .sorted { $0.date < $1.date }
             }
             else
             {
@@ -323,6 +510,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
                                                      date: date,
                                                      marks: marks)
                 }
+                .sorted { $0.date < $1.date }
             }
             else
             {
@@ -336,3 +524,45 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
 }
+
+extension UIAlertController {
+    func addImage(_ image: UIImage) {
+        let maxSize = CGSize(width: 245, height: 300)
+        let imageSize = image.size
+
+        var newImageSize = imageSize
+
+        if imageSize.width > maxSize.width {
+            newImageSize.width = maxSize.width
+            newImageSize.height = imageSize.height * maxSize.width / imageSize.width
+        }
+
+        if newImageSize.height > maxSize.height {
+            newImageSize.height = maxSize.height
+            newImageSize.width = imageSize.width * maxSize.height / imageSize.height
+        }
+
+        let resizedImage = image.resized(to: CGSize(width: 245, height: 300))
+
+        let imageView = UIImageView(image: resizedImage)
+        self.view.addSubview(imageView)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            imageView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 40),
+            imageView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 40),
+            imageView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -40),
+            imageView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -40)
+        ])
+    }
+}
+
+extension UIImage {
+    func resized(to size: CGSize) -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(size, false, scale)
+        defer { UIGraphicsEndImageContext() }
+        draw(in: CGRect(origin: .zero, size: size))
+        return UIGraphicsGetImageFromCurrentImageContext()
+    }
+}
+
