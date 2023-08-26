@@ -41,12 +41,13 @@ class PastPaperCollectionViewController: UIViewController, UICollectionViewDeleg
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        var cell = UICollectionViewCell()
         if let learningMaterialCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell1", for: indexPath) as? CollectionViewCell {
             learningMaterialCell.configure(with: dataSource[indexPath.row])
-            cell = learningMaterialCell
+            learningMaterialCell.contentView.layer.cornerRadius = 1.5
+            learningMaterialCell.contentView.layer.masksToBounds = true
+            return learningMaterialCell
         }
-        return cell;
+        return UICollectionViewCell()
     }
     
 

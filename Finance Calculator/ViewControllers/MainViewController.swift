@@ -49,9 +49,9 @@ class MainViewController: UIViewController {
     // prepare main view buttons
     func prepareButtons()
     {
-        buttonList.append(HomeButton(title: NSLocalizedString("Past Papers", comment: ""),photoName: "SavingsMain.png"))
-        buttonList.append(HomeButton(title: NSLocalizedString("School Papers", comment: ""),photoName: "MortgageMain.png"))
-        buttonList.append(HomeButton(title: NSLocalizedString("Tutorials", comment: ""),photoName: "LoanMain.png"))
+        buttonList.append(HomeButton(title: NSLocalizedString("Past Papers", comment: ""),photoName: "essay.png"))
+        buttonList.append(HomeButton(title: NSLocalizedString("School Papers", comment: ""),photoName: "education.png"))
+        buttonList.append(HomeButton(title: NSLocalizedString("Tutorials", comment: ""),photoName: "video-tutorials.png"))
         buttonList.append(HomeButton(title: NSLocalizedString("Profile", comment: ""),photoName: "ProfileMain.png"))
         buttonList.append(HomeButton(title: NSLocalizedString("help", comment: ""),photoName: "HelpMain.png"))
     }
