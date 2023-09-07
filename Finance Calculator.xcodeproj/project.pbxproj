@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -51,6 +51,10 @@
 		B9FFF57D2579A9F70036AC75 /* Finance_Calculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9FFF57B2579A9F70036AC75 /* Finance_Calculator.xcdatamodeld */; };
 		B9FFF58D2579A9FA0036AC75 /* Finance_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FFF58C2579A9FA0036AC75 /* Finance_CalculatorTests.swift */; };
 		B9FFF5982579A9FA0036AC75 /* Finance_CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FFF5972579A9FA0036AC75 /* Finance_CalculatorUITests.swift */; };
+		C02E1E3B2A993E8B00FA45E1 /* Paper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02E1E3A2A993E8B00FA45E1 /* Paper.swift */; };
+		C02E1E3D2A99E20D00FA45E1 /* ProfileViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02E1E3C2A99E20D00FA45E1 /* ProfileViewControllerTests.swift */; };
+		C0C2E22E2A9A09D80084FE26 /* PastPaperData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C2E22C2A9A09D80084FE26 /* PastPaperData+CoreDataClass.swift */; };
+		C0C2E22F2A9A09D80084FE26 /* PastPaperData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C2E22D2A9A09D80084FE26 /* PastPaperData+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +126,10 @@
 		B9FFF5932579A9FA0036AC75 /* Finance CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Finance CalculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9FFF5972579A9FA0036AC75 /* Finance_CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Finance_CalculatorUITests.swift; sourceTree = "<group>"; };
 		B9FFF5992579A9FA0036AC75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C02E1E3A2A993E8B00FA45E1 /* Paper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paper.swift; sourceTree = "<group>"; };
+		C02E1E3C2A99E20D00FA45E1 /* ProfileViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerTests.swift; sourceTree = "<group>"; };
+		C0C2E22C2A9A09D80084FE26 /* PastPaperData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PastPaperData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C0C2E22D2A9A09D80084FE26 /* PastPaperData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PastPaperData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +178,7 @@
 		B9EAD2BB257B19BC005B00FC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C02E1E3A2A993E8B00FA45E1 /* Paper.swift */,
 				B9EAD2B9257B173B005B00FC /* HomeButton.swift */,
 				B940A822257DB1CC004736AB /* AmortizedData.swift */,
 				61171E782A98EB14004CE6BD /* LearningMaterial.swift */,
@@ -230,6 +239,8 @@
 		B9FFF5662579A9F70036AC75 = {
 			isa = PBXGroup;
 			children = (
+				C0C2E22C2A9A09D80084FE26 /* PastPaperData+CoreDataClass.swift */,
+				C0C2E22D2A9A09D80084FE26 /* PastPaperData+CoreDataProperties.swift */,
 				B9EAD2DF257D98DF005B00FC /* SavingsData+CoreDataClass.swift */,
 				B9EAD2E0257D98DF005B00FC /* SavingsData+CoreDataProperties.swift */,
 				B9FFF5712579A9F70036AC75 /* Finance Calculator */,
@@ -272,6 +283,7 @@
 			children = (
 				B9FFF58C2579A9FA0036AC75 /* Finance_CalculatorTests.swift */,
 				B9FFF58E2579A9FA0036AC75 /* Info.plist */,
+				C02E1E3C2A99E20D00FA45E1 /* ProfileViewControllerTests.swift */,
 			);
 			path = "Finance CalculatorTests";
 			sourceTree = "<group>";
@@ -347,8 +359,9 @@
 		B9FFF5672579A9F70036AC75 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					B9FFF56E2579A9F70036AC75 = {
 						CreatedOnToolsVersion = 11.5;
@@ -451,9 +464,12 @@
 				B9EAD2C9257CE3BC005B00FC /* CommonFunctions.swift in Sources */,
 				B9FFF5732579A9F70036AC75 /* AppDelegate.swift in Sources */,
 				61171E7D2A98EC57004CE6BD /* Tutorial.swift in Sources */,
+				C02E1E3B2A993E8B00FA45E1 /* Paper.swift in Sources */,
 				B9FFF5752579A9F70036AC75 /* SceneDelegate.swift in Sources */,
 				B9EAD2E2257D98DF005B00FC /* SavingsData+CoreDataProperties.swift in Sources */,
+				C0C2E22E2A9A09D80084FE26 /* PastPaperData+CoreDataClass.swift in Sources */,
 				61171E812A98ED5A004CE6BD /* CollectionViewCell.swift in Sources */,
+				C0C2E22F2A9A09D80084FE26 /* PastPaperData+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +477,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C02E1E3D2A99E20D00FA45E1 /* ProfileViewControllerTests.swift in Sources */,
 				B9FFF58D2579A9FA0036AC75 /* Finance_CalculatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,6 +552,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -595,6 +613,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -665,7 +684,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5R32U2P9LA;
+				DEVELOPMENT_TEAM = 27QF2MDTDA;
 				INFOPLIST_FILE = "Finance CalculatorTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -6,16 +6,26 @@
 //
 
 import UIKit
+import CoreData
 
 class TutorialCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    let dataSource: [Tutorial] = [
-        Tutorial(year: "2021", marks: "78%", date: "2023-08-03", duration: "2 Hrs", url: "https://www.google.com"),
-        Tutorial(year: "2021", marks: "78%", date: "2023-08-03", duration: "2 Hrs", url: "https://www.google.com"),
-        Tutorial(year: "2021", marks: "78%", date: "2023-08-03", duration: "2 Hrs", url: "https://www.google.com"),
-        Tutorial(year: "2021", marks: "78%", date: "2023-08-03", duration: "2 Hrs", url: "https://www.google.com")
-    ]
+    var context: NSManagedObjectContext? {
+        guard let appDelegate =
+        UIApplication.shared.delegate as? AppDelegate else {
+            return nil
+        }
+        return appDelegate.persistentContainer.viewContext
+    }
     
+//    let dataSource: [Tutorial] = [
+//        Tutorial(year: "2021", marks: "78%", date: "2023-08-03", duration: "2 Hrs", url: "https://www.google.com"),
+//        Tutorial(year: "2021", marks: "78%", date: "2023-08-03", duration: "2 Hrs", url: "https://www.google.com"),
+//        Tutorial(year: "2021", marks: "78%", date: "2023-08-03", duration: "2 Hrs", url: "https://www.google.com"),
+//        Tutorial(year: "2021", marks: "78%", date: "2023-08-03", duration: "2 Hrs", url: "https://www.google.com")
+//    ]
+    
+    var dataSource: [PastPaper] = []
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -40,6 +50,43 @@ class TutorialCollectionViewController: UIViewController, UICollectionViewDelega
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+            
+        fetchStoredData()
+    }
+    
+    func fetchStoredData()
+    {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName:"PastPaperData")
+        do
+        {
+            let savingData = try self.context?.fetch(request) as! [PastPaperData]
+            if(savingData.count > 0 )
+            {
+            
+                dataSource = savingData
+                    .filter{data in return data.category == "TUTORIAL"}
+                    .map { data in
+                                PastPaper(year: data.year ?? "",
+                                          marks: data.marks ?? "",
+                                          date: data.date ?? "",
+                                          duration: data.duration ?? "",
+                                          url: data.url ?? "")
+                }
+                collectionView.reloadData()
+            }
+            else
+            {
+                print("No results found")
+            }
+        }
+        catch
+        {
+            print("Error in fetching items")
+        }
     }
     
 
